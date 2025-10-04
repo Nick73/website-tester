@@ -1,7 +1,7 @@
 # Client Template Chooser
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-orange.svg)](LICENSE)
-[![pages-build-deployment](https://img.shields.io/github/deployments/Nick73/website-tester/github-pages?label=GitHub%20Pages&logo=github)](https://Nick73.github.io/wesbite-tester/)
+[![pages-build-deployment](https://img.shields.io/github/deployments/nick73/website-tester/github-pages?label=GitHub%20Pages&logo=github)](https://nick73.github.io/website-tester/)
 
 A lightweight way to showcase multiple website templates so clients can preview and pick their favorite design.
 
