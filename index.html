@@ -1,22 +1,21 @@
-<!--picker-->
   <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Layout Chooser — J Conklin Construction</title>
+  <title>Easy Layout Chooser</title>
   <style>
     body {
       margin: 0;
-      background: #0f172a; /* dark neutral backdrop */
-      color: #e2e8f0;
+      background: #283631; /* dark neutral backdrop */
+      color: #2e2e2e;
       font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
       display: flex;
       flex-direction: column;
       height: 100vh;
     }
     header {
-      background: #1e293b;
+      background: #38524c;
       padding: .75rem 1rem;
       display: flex;
       flex-wrap: wrap;
@@ -30,8 +29,8 @@
       color: #cbd5e1;
     }
     button {
-      background: #38bdf8;
-      color: #0f172a;
+      background: #363f3d;
+      color: #00e5ff;
       font-weight: 700;
       border: none;
       border-radius: .5rem;
@@ -39,7 +38,7 @@
       cursor: pointer;
       transition: background .2s;
     }
-    button:hover { background: #0ea5e9; }
+    button:hover { background: #47ffff; }
     iframe {
       flex: 1;
       width: 100%;
@@ -54,6 +53,11 @@
     <button onclick="switchSample('sample1/index.html')">Sample 1</button>
     <button onclick="switchSample('sample2/index.html')">Sample 2</button>
     <button onclick="switchSample('sample3/index.html')">Sample 3</button>
+<!--<button onclick="switchSample('sample4/index.html')">Sample 4</button>-->
+<!--<button onclick="switchSample('sample5/index.html')">Sample 5</button>-->
+<!--<button onclick="switchSample('sample6/index.html')">Sample 6</button>-->
+
+
   </header>
   <iframe id="preview" src="sample1/index.html" title="Site preview"></iframe>
 
@@ -64,4 +68,3 @@
   </script>
 </body>
 </html>
-<!--picker end-->
