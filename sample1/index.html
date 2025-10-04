@@ -1,0 +1,284 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>J Conklin Construction, LLC — Handyman & Home Improvements</title>
+  <meta name="description" content="J Conklin Construction, LLC offers reliable handyman services, home repairs, and small renovations. Free estimates. Licensed & insured.">
+  <meta property="og:title" content="J Conklin Construction, LLC — Handyman & Home Improvements" />
+  <meta property="og:description" content="Reliable handyman services: carpentry, drywall, flooring, kitchens, baths, and more. Free estimates." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://example.com/" />
+  <meta property="og:image" content="/images/og-cover.jpg" />
+  <link rel="icon" href="/favicon.ico">
+  <style>
+    :root{
+      --brand:#0f6abf;          /* primary */
+      --brand-2:#0b4f8e;        /* darker accent */
+      --accent:#ffb22c;         /* call-to-action */
+      --ink:#1e293b;            /* text */
+      --ink-2:#334155;          /* secondary text */
+      --bg:#f6f8fb;             /* page */
+      --card:#ffffff;           /* surfaces */
+      --ok:#16a34a;             /* success */
+      --muted:#e5e7eb;          /* borders */
+      --shadow:0 10px 25px rgba(2,10,20,.08);
+      --radius:16px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,"Noto Sans",sans-serif;line-height:1.55}
+    a{color:var(--brand)} a:hover{color:var(--brand-2)}
+    img{max-width:100%;height:auto;display:block}
+    .container{width:min(1100px,92vw);margin:auto}
+    .btn{display:inline-block;background:var(--accent);color:#111827;text-decoration:none;padding:.9rem 1.15rem;border-radius:12px;font-weight:700;box-shadow:var(--shadow)}
+    .btn--secondary{background:var(--brand);color:#fff}
+    .btn--ghost{background:transparent;border:2px solid var(--brand);color:var(--brand)}
+    .tag{display:inline-flex;gap:.4rem;align-items:center;background:#ecf3fb;color:var(--brand-2);padding:.35rem .6rem;border-radius:999px;font-size:.85rem;font-weight:600}
+    header.top{position:sticky;top:0;background:#ffffffb3;backdrop-filter:saturate(180%) blur(8px);border-bottom:1px solid #e8edf4;z-index:10}
+    header .wrap{display:flex;align-items:center;justify-content:space-between;padding:.6rem 0}
+    .brand{display:flex;align-items:center;gap:.75rem}
+    .brand__logo{width:42px;height:42px;display:grid;place-items:center;border-radius:10px;background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#fff;font-weight:900;letter-spacing:.5px;box-shadow:var(--shadow)}
+    .brand__name{font-weight:900}
+    .nav{display:flex;gap:1rem;align-items:center}
+    .nav a{color:var(--ink-2);text-decoration:none;font-weight:600}
+    .hero{padding:clamp(2rem,4vw,4rem) 0;background:linear-gradient(180deg,#ffffff 0%, #f2f6fb 100%)}
+    .hero .grid{display:grid;grid-template-columns:1.2fr 1fr;gap:2rem;align-items:center}
+    .hero h1{font-size:clamp(1.8rem,3.5vw,3rem);line-height:1.15;margin:.25rem 0}
+    .hero p.lead{font-size:clamp(1rem,1.3vw,1.15rem);color:var(--ink-2)}
+    .hero .cta{display:flex;gap:.75rem;flex-wrap:wrap;margin-top:1rem}
+    .badges{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:1rem}
+    .badge{background:#fff;border:1px solid var(--muted);padding:.5rem .7rem;border-radius:10px;font-weight:700;color:#111827}
+    .phone{white-space:nowrap}
+    .strip{background:#0b1220;color:#dbe7ff;padding:.6rem 0;font-size:.95rem}
+    .strip strong{color:#fff}
+    .section{padding:clamp(1.6rem,4vw,3rem) 0}
+    .section h2{font-size:clamp(1.3rem,2.2vw,2rem);margin:0 0 .5rem}
+    .muted{color:var(--ink-2)}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem}
+    .card{background:var(--card);border:1px solid #e6ebf2;border-radius:var(--radius);box-shadow:var(--shadow);padding:1.1rem}
+    .card h3{margin:.2rem 0 .4rem;font-size:1.05rem}
+    .card p{margin:0}
+    .gallery{display:grid;grid-template-columns:repeat(6,1fr);gap:.5rem}
+    .gallery figure{margin:0;grid-column:span 2;background:#fff;border:1px solid #e6ebf2;border-radius:12px;overflow:hidden}
+    .gallery figcaption{padding:.4rem .6rem;font-size:.9rem;color:var(--ink-2)}
+    .testis{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1rem}
+    .quote{background:#fff;border-left:4px solid var(--ok);padding:1rem;border-radius:10px;box-shadow:var(--shadow)}
+    .cta-bar{background:linear-gradient(90deg,var(--brand) 0%, var(--brand-2) 100%);color:#fff;border-radius:var(--radius);padding:1.2rem 1rem;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.8rem}
+    .cta-bar strong{font-size:1.1rem}
+    footer{background:#0b0f16;color:#c9d2e3;padding:2rem 0;margin-top:2rem;border-top:2px solid #101826}
+    footer a{color:#e5efff}
+    .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+    @media (max-width:900px){.hero .grid{grid-template-columns:1fr}.gallery{grid-template-columns:repeat(2,1fr)}}
+  </style>  <!-- Structured Data for a local contractor -->  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HomeAndConstructionBusiness",
+    "name": "J Conklin Construction, LLC",
+    "url": "https://example.com/",
+    "image": "https://example.com/images/og-cover.jpg",
+    "telephone": "+1-555-123-4567",
+    "areaServed": "Your City & Nearby",
+    "priceRange": "$$",
+    "sameAs": [
+      "https://www.facebook.com/JConklinConstruction"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "",
+      "addressLocality": "",
+      "addressRegion": "",
+      "postalCode": "",
+      "addressCountry": "US"
+    }
+  }
+  </script></head>
+
+<body>
+  <header class="top" id="top">
+    <div class="container wrap">
+      <div class="brand">
+        <div class="brand__logo" aria-hidden>JC</div>
+        <div>
+          <div class="brand__name">J Conklin Construction, LLC</div>
+          <div class="muted" style="font-size:.9rem">Handyman • Home Repairs • Small Renovations</div>
+        </div>
+      </div>
+      <nav class="nav" aria-label="Primary">
+        <a href="#services">Services</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#testimonials">Reviews</a>
+        <a href="#contact" class="btn btn--secondary">Free Estimate</a>
+      </nav>
+    </div>
+  </header>  <div class="strip">
+    <div class="container">✅ <strong>Licensed & Insured</strong> • On-time, on-budget home improvements • Call <a class="phone" href="tel:+15551234567">(555) 123‑4567</a></div>
+  </div>  <section class="hero">
+    <div class="container grid">
+      <div>
+        <span class="tag" aria-label="badge">Trusted Local Handyman</span>
+        <h1>Quality Repairs & Upgrades—done right the first time.</h1>
+        <p class="lead">From carpentry and drywall to flooring, kitchens, and baths—J Conklin Construction, LLC brings reliable craftsmanship and clear communication to every job.</p>
+        <div class="cta">
+          <a href="#contact" class="btn">Get a Free Estimate</a>
+          <a href="#gallery" class="btn btn--ghost">See Recent Work</a>
+        </div>
+        <div class="badges" aria-label="trust badges">
+          <span class="badge">✨ 10+ Years Experience</span>
+          <span class="badge">🧰 Small Jobs Welcome</span>
+          <span class="badge">🏡 Residential</span>
+        </div>
+      </div>
+      <div>
+        <figure class="card" style="padding:0;overflow:hidden">
+          <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=1200&auto=format&fit=crop" alt="Handyman installing wooden trim with precision tools"/>
+          <figcaption style="padding:.8rem" class="muted">Craftsmanship you can see: finish carpentry, flooring, and more.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>  <section class="section" id="services">
+    <div class="container">
+      <h2>Popular Services</h2>
+      <p class="muted">If you don’t see what you need, just ask—odds are we do it.</p>
+      <div class="cards" role="list">
+        <article class="card" role="listitem">
+          <h3>Carpentry & Trim</h3>
+          <p>Doors, baseboards, crown molding, shelving, custom built‑ins.</p>
+        </article>
+        <article class="card" role="listitem">
+          <h3>Drywall & Paint</h3>
+          <p>Patch, repair, texture matching, full room finishing.</p>
+        </article>
+        <article class="card" role="listitem">
+          <h3>Flooring</h3>
+          <p>Laminate, LVP, tile, subfloor repairs and transitions.</p>
+        </article>
+        <article class="card" role="listitem">
+          <h3>Kitchens & Baths</h3>
+          <p>Cabinet installs, backsplash, vanities, hardware, caulking.</p>
+        </article>
+        <article class="card" role="listitem">
+          <h3>Exterior</h3>
+          <p>Deck fixes, fence repair, fascia/soffit, light siding work.</p>
+        </article>
+        <article class="card" role="listitem">
+          <h3>Honey‑Do Lists</h3>
+          <p>Small jobs welcome—let’s knock out your punch list.</p>
+        </article>
+      </div>
+    </div>
+  </section>  <section class="section" id="gallery">
+    <div class="container">
+      <h2>Recent Work</h2>
+      <p class="muted">Swap these placeholders with before/after photos. Use short captions to explain the job.</p>
+      <div class="gallery">
+        <figure>
+          <img src="https://images.unsplash.com/photo-1582582429410-466a8a4e0f07?q=80&w=1200&auto=format&fit=crop" alt="Freshly installed tile backsplash in a bright kitchen"/>
+          <figcaption>Kitchen backsplash install</figcaption>
+        </figure>
+        <figure>
+          <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?q=80&w=1200&auto=format&fit=crop" alt="Cozy living room with new flooring and trim"/>
+          <figcaption>LVP flooring + trim</figcaption>
+        </figure>
+        <figure>
+          <img src="https://images.unsplash.com/photo-1582582429410-6bf1d7a5b3e0?q=80&w=1200&auto=format&fit=crop" alt="Bathroom vanity and mirror installed with clean caulking"/>
+          <figcaption>Vanity replacement</figcaption>
+        </figure>
+        <figure>
+          <img src="https://images.unsplash.com/photo-1582582429410-7e2d2c9b36b7?q=80&w=1200&auto=format&fit=crop" alt="Wooden deck steps repaired and stained"/>
+          <figcaption>Deck step repair</figcaption>
+        </figure>
+        <figure>
+          <img src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?q=80&w=1200&auto=format&fit=crop" alt="Custom shelving in a home office"/>
+          <figcaption>Custom shelving</figcaption>
+        </figure>
+        <figure>
+          <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?q=80&w=1200&auto=format&fit=crop" alt="Fresh drywall patch painted to match"/>
+          <figcaption>Drywall patch + paint</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>  <section class="section" id="testimonials">
+    <div class="container">
+      <h2>Happy Homeowners</h2>
+      <div class="testis">
+        <blockquote class="quote">“Showed up on time, communicated clearly, and the work looks fantastic. Will hire again!”<br><span class="muted">— Amanda R.</span></blockquote>
+        <blockquote class="quote">“Fair price and quality craftsmanship. Our kitchen looks brand new.”<br><span class="muted">— Michael T.</span></blockquote>
+        <blockquote class="quote">“Knocked out our punch list in one afternoon. Highly recommend.”<br><span class="muted">— Kim & Jorge</span></blockquote>
+      </div>
+    </div>
+  </section>  <section class="container section">
+    <div class="cta-bar" role="region" aria-label="Get an estimate">
+      <strong>Ready to start your project?</strong>
+      <div>
+        <a class="btn btn--secondary" href="tel:+15551234567">Call (555) 123‑4567</a>
+        <a class="btn" href="#contact">Request Free Estimate</a>
+      </div>
+    </div>
+  </section>  <section class="section" id="contact">
+    <div class="container">
+      <h2>Request a Free Estimate</h2>
+      <p class="muted">Tell us about your project and we’ll get back to you within one business day.</p>
+      <div class="cols">
+        <form class="card" action="https://formspree.io/f/your-id" method="POST">
+          <label class="sr-only" for="name">Name</label>
+          <input id="name" name="name" required placeholder="Your name" style="width:100%;padding:.9rem;border:1px solid #cfd6e4;border-radius:10px;margin-bottom:.7rem"/><label class="sr-only" for="phone">Phone</label>
+      <input id="phone" name="phone" placeholder="Phone (optional)" style="width:100%;padding:.9rem;border:1px solid #cfd6e4;border-radius:10px;margin-bottom:.7rem"/>
+      
+      <label class="sr-only" for="email">Email</label>
+      <input id="email" type="email" name="email" required placeholder="Email" style="width:100%;padding:.9rem;border:1px solid #cfd6e4;border-radius:10px;margin-bottom:.7rem"/>
+      
+      <label class="sr-only" for="msg">Project details</label>
+      <textarea id="msg" name="message" required rows="5" placeholder="Tell us what you need done…" style="width:100%;padding:.9rem;border:1px solid #cfd6e4;border-radius:10px;margin-bottom:.7rem"></textarea>
+      
+      <button class="btn" type="submit">Send Request</button>
+      <p class="muted" style="font-size:.85rem;margin:.6rem 0 0">Or email: <a href="mailto:hello@example.com">hello@example.com</a></p>
+    </form>
+    <div>
+      <div class="card" style="margin-bottom:1rem">
+        <h3>Contact</h3>
+        <p><strong>Phone:</strong> <a class="phone" href="tel:+15551234567">(555) 123‑4567</a><br>
+           <strong>Email:</strong> <a href="mailto:hello@example.com">hello@example.com</a></p>
+        <p><strong>Hours:</strong> Mon–Fri 8am–6pm • Sat by appt.</p>
+      </div>
+      <div class="card">
+        <h3>Service Area</h3>
+        <p>Your City, Nearby Towns</p>
+        <p><a class="btn btn--ghost" href="https://maps.google.com/?q=Your+City" target="_blank" rel="noopener">Open in Google Maps</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </section>  <footer>
+    <div class="container cols">
+      <div>
+        <div class="brand" style="margin-bottom:.4rem">
+          <div class="brand__logo" aria-hidden>JC</div>
+          <div class="brand__name">J Conklin Construction, LLC</div>
+        </div>
+        <p class="muted">Handyman • Home Repairs • Small Renovations</p>
+        <p class="muted">© <span id="year"></span> J Conklin Construction, LLC. All rights reserved.</p>
+      </div>
+      <div>
+        <h3 style="margin-top:0">Quick Links</h3>
+        <p><a href="#services">Services</a><br>
+           <a href="#gallery">Gallery</a><br>
+           <a href="#testimonials">Reviews</a><br>
+           <a href="#contact">Free Estimate</a></p>
+      </div>
+      <div>
+        <h3 style="margin-top:0">Policies</h3>
+        <p><a href="#">License & Insurance</a><br>
+           <a href="#">Privacy</a></p>
+      </div>
+      <div>
+        <h3 style="margin-top:0">Follow</h3>
+        <p><a href="https://www.facebook.com/share/1ANZMDhX8Q/" target="_blank" rel="noopener">Facebook</a></p>
+      </div>
+    </div>
+  </footer>  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script></body>
+</html>

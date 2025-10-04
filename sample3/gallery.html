@@ -1,0 +1,120 @@
+<!doctype html>
+
+<style id="_styles.css_">
+:root{
+  --bg:#0b0f14;         /* deep slate */
+  --panel:#101620;       /* cards / surfaces */
+  --ink:#e6eaf2;         /* primary text */
+  --muted:#aab3c2;       /* secondary text */
+  --line:#1b2330;        /* hairline */
+  --brand:#66a3ff;       /* refined blue */
+  --brand-2:#3a7fe6;     /* hover/focus */
+  --accent:#f0c36a;      /* subtle gold for callouts */
+  --radius:14px;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.65}
+img{max-width:100%;height:auto;display:block}
+.container{width:min(1120px,92vw);margin:auto}
+
+/* Header / Nav */
+.header{position:sticky;top:0;z-index:50;background:rgba(11,15,20,.7);backdrop-filter:saturate(160%) blur(8px);border-bottom:1px solid var(--line)}
+.header .bar{display:flex;align-items:center;justify-content:space-between;padding:.9rem 0}
+.brand{display:flex;align-items:center;gap:.7rem;text-decoration:none;color:inherit}
+.brand__logo{width:40px;height:40px;border-radius:10px;display:grid;place-items:center;background:linear-gradient(135deg,#2a3d57,#142032);color:#cfe0ff;font-weight:900;border:1px solid var(--line)}
+.brand__name{font-weight:900;letter-spacing:.2px}
+.nav{display:flex;gap:.4rem;align-items:center}
+.nav a{color:var(--muted);text-decoration:none;font-weight:700;padding:.55rem .7rem;border-radius:10px}
+.nav a[aria-current="page"]{color:#0b0f14;background:var(--ink)}
+.nav a:hover{background:#0e1622;color:#d8dfec}
+
+/* Hero */
+.hero{padding:clamp(1.8rem,4vw,3.2rem) 0;border-bottom:1px solid var(--line)}
+.hero h1{margin:.2rem 0 .5rem;font-size:clamp(2rem,3.4vw,3rem);line-height:1.1;letter-spacing:.2px}
+.lead{color:var(--muted);max-width:62ch}
+
+/* Layout */
+.grid{display:grid;gap:1rem}
+.grid-2{grid-template-columns:1.1fr .9fr}
+@media (max-width:900px){.grid-2{grid-template-columns:1fr}}
+
+/* Cards / Panels */
+.card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:1.1rem}
+
+/* Buttons */
+.btn{display:inline-block;background:var(--brand);color:#08111e;text-decoration:none;font-weight:900;padding:.85rem 1.05rem;border-radius:12px;border:1px solid #2c64c7}
+.btn:hover{background:var(--brand-2);color:#08111e}
+.btn--ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.btn--ghost:hover{border-color:#2a3952}
+
+/* Sections */
+.section{padding:clamp(1.4rem,4vw,2.6rem) 0}
+.section h2{margin:0 0 .5rem;font-size:1.35rem}
+.muted{color:var(--muted)}
+
+/* Gallery */
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:.7rem}
+.gallery figure{margin:0}
+.gallery img{border-radius:12px;border:1px solid var(--line);filter:saturate(.96)}
+.gallery figcaption{font-size:.9rem;color:var(--muted);margin-top:.35rem}
+
+/* Footer */
+footer{border-top:1px solid var(--line);background:#0a1018;padding:2rem 0;color:var(--muted)}
+footer a{color:#cfe0ff;text-decoration:none}
+
+/* Forms */
+label{font-weight:800;font-size:.95rem}
+input,textarea{width:100%;padding:.9rem;border:1px solid var(--line);border-radius:12px;background:#0c1521;color:var(--ink)}
+input:focus,textarea:focus{outline:none;border-color:#284d86;box-shadow:0 0 0 3px rgba(102,163,255,.15)}
+
+/* Util */
+.stack{display:flex;flex-direction:column;gap:.7rem}
+.row{display:flex;gap:.6rem;flex-wrap:wrap}
+.hr{height:1px;background:var(--line);border:0;margin:1.2rem 0}
+.badge{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:.3rem .6rem;color:var(--muted)}
+
+</style>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gallery — J Conklin Construction, LLC</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header"><div class="container bar">
+    <a class="brand" href="/"><div class="brand__logo" aria-hidden>JC</div><div class="brand__name">J Conklin Construction, LLC</div></a>
+    <nav class="nav" aria-label="Primary">
+      <a href="estimates.html">Estimates</a>
+      <a href="gallery.html" aria-current="page">Gallery</a>
+      <a href="about.html">About</a>
+      <a href="contact.html" class="btn">Contact</a>
+    </nav>
+  </div></header>  <main class="section">
+    <div class="container">
+      <h1>Recent Work</h1>
+      <p class="muted">Swap in your photos. Keep captions short and factual.</p>
+      <div class="gallery" style="margin-top:1rem">
+        <figure>
+          <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?q=80&w=1200&auto=format&fit=crop" alt="New flooring and trim" />
+          <figcaption>LVP flooring + trim</figcaption>
+        </figure>
+        <figure>
+          <img src="https://images.unsplash.com/photo-1582582429410-466a8a4e0f07?q=80&w=1200&auto=format&fit=crop" alt="Kitchen backsplash" />
+          <figcaption>Backsplash install</figcaption>
+        </figure>
+        <figure>
+          <img src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?q=80&w=1200&auto=format&fit=crop" alt="Custom shelving" />
+          <figcaption>Custom shelving</figcaption>
+        </figure>
+        <figure>
+          <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?q=80&w=1200&auto=format&fit=crop" alt="Drywall + paint" />
+          <figcaption>Drywall patch + paint</figcaption>
+        </figure>
+      </div>
+    </div>
+  </main>  <footer><div class="container">© <span id="yearG"></span> J Conklin Construction, LLC</div></footer>
+  <script>document.getElementById('yearG').textContent=new Date().getFullYear()</script>
+</body>
+</html>
